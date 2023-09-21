@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Wyprany z empatii',
-  description: 'Weterynaryjny głos z piwnicy',
+  description: 'Weterynaryjny głos z płyty gnojowej',
 }
 
 export default function RootLayout({ children }) {
