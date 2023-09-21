@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Home() {
-  return <div >Hello</div>;
+  return <Link href='/' className="link" >Hello</Link>;
 }
