@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 const AuthLink = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const [isLoggedIn, setIsLoggedIn] = useState(true)
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
@@ -17,9 +18,21 @@ const AuthLink = () => {
 
 	return (
 		<>
-			<Link href='/login' className='link hidden md:flex'>
-				Zaloguj
-			</Link>
+			{!isLoggedIn && (
+				<Link href='/login' className='link hidden md:flex'>
+					Zaloguj
+				</Link>
+			)}
+			{isLoggedIn && (
+				<Link href='/logout' className='link hidden md:flex'>
+					Wyloguj
+				</Link>
+			)}
+			{isLoggedIn && (
+				<Link href='/write' className='link hidden md:flex'>
+					Napisz
+				</Link>
+			)}
 			<div className='flex md:hidden'>
 				<button className='h-[40px] w-[40px] ' onClick={toggleMenu}>
 					<div
@@ -27,7 +40,9 @@ const AuthLink = () => {
 					></div>
 				</button>
 				{isOpen && (
-					<div className={`w-full h-full flex flex-col gap-12 items-center justify-center bg-primary-100 absolute top-24 left-0 text-4xl transition-all ${navClass}`}>
+					<div
+						className={`w-full h-full flex flex-col gap-12 items-center justify-center bg-primary-100 absolute top-24 left-0 text-4xl transition-all ${navClass}`}
+					>
 						<Link href='/' className='link '>
 							Blog
 						</Link>
@@ -37,9 +52,21 @@ const AuthLink = () => {
 						<Link href='/contact' className='link'>
 							Kontakt
 						</Link>
-						<Link href='/login' className='link'>
-							Zaloguj
-						</Link>
+						{!isLoggedIn && (
+							<Link href='/login' className='link'>
+								Zaloguj
+							</Link>
+						)}
+						{isLoggedIn && (
+							<Link href='/logout' className='link'>
+								Wyloguj
+							</Link>
+						)}
+						{isLoggedIn && (
+							<Link href='/write' className='link'>
+								Napisz
+							</Link>
+						)}
 					</div>
 				)}
 			</div>
