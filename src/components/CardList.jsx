@@ -6,31 +6,43 @@ const CardList = () => {
 	const cards = [
 		{
 			title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, description, url, source',
+			date: '23.12.2023',
+			category: 'Weterynaria',
 			url: '/',
 			src: '/mountain.jpg',
 		},
 		{
 			title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, description, url, source',
+			date: '23.12.2023',
+			category: 'lifestyle',
 			url: '/',
 			src: '/mountain2.jpg',
 		},
 		{
 			title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, description, url, source',
+			date: '23.12.2023',
+			category: 'RPG',
 			url: '/',
 			src: '/forest.jpg',
 		},
 		{
 			title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, description, url, source',
+			date: '23.12.2023',
+			category: 'weterynaria',
 			url: '/',
 			src: '/mountain.jpg',
 		},
 		{
 			title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, description, url, source',
+			date: '23.12.2023',
+			category: 'zwierzaki',
 			url: '/',
 			src: '/mountain2.jpg',
 		},
 		{
 			title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, description, url, source',
+			date: '23.12.2023',
+			category: 'gry',
 			url: '/',
 			src: '/forest.jpg',
 		},

@@ -74,15 +74,33 @@
   transition: rotate .5s, translate(20deg);
 }
 
-.cardText {
+.cardText,
+.cardDate, 
+.cardCat {
   z-index: 1000;
   margin-inline: auto;
-  inset: auto 0 2rem;
   transform: translateY(0rem) translateZ(20px);
   transition: .5s;
 }
 
-.cardContainer:hover .cardText {
+.cardText {
+   inset: auto 0 2rem;  
+}
+
+.cardDate, 
+.cardCat {
+  inset: auto 1rem;
+  font-size: .5rem;
+  text-transform: uppercase;
+}
+
+.cardCat {
+    color:  #0de3e0;
+}
+
+.cardContainer:hover .cardText,
+.cardContainer:hover .cardCat,
+.cardContainer:hover .cardDate {
   transform: translateY(-2rem) translateZ(20px) scale(1.2);
   rotate: x calc(20deg * -1);
 }
