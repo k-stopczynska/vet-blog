@@ -7,7 +7,7 @@ const Navbar = () => {
 		<nav className='w-full h-24 flex items-center justify-between'>
 			<h3 className='text-2xl lg:text-4xl font-bold'>Wyprany z empatii.blog</h3>
 			<div className='flex gap-4 text-base lg:text-xl'>
-				<Link href='/' className='link hidden md:flex'>
+				<Link href='/blog' className='link hidden md:flex'>
 					Blog
 				</Link>
 				<Link href='/about' className='link hidden md:flex'>
