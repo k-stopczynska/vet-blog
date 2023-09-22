@@ -1,26 +1,25 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
+import AuthLink from './AuthLink';
 
 const Navbar = () => {
-  return (
-		<nav className='w-full h-20 flex items-center justify-between'>
-			<h3 className="text-2xl font-bold">Wyprany z empatii.blog</h3>
-			<div className="flex gap-4 text-xl">
-				<Link href='/' className='link'>
+	return (
+		<nav className='w-full h-24 flex items-center justify-between'>
+			<h3 className='text-2xl lg:text-4xl font-bold'>Wyprany z empatii.blog</h3>
+			<div className='flex gap-4 text-base lg:text-xl'>
+				<Link href='/' className='link hidden md:flex'>
 					Blog
 				</Link>
-				<Link href='/about' className='link'>
+				<Link href='/about' className='link hidden md:flex'>
 					O mnie
 				</Link>
-				<Link href='/contact' className='link'>
+				<Link href='/contact' className='link hidden md:flex '>
 					Kontakt
 				</Link>
-				<Link href='/login' className='link'>
-					Zaloguj
-				</Link>
+				<AuthLink />
 			</div>
 		</nav>
-  );
-}
+	);
+};
 
-export default Navbar
+export default Navbar;

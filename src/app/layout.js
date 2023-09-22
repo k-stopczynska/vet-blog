@@ -14,7 +14,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-primary-100 text-light-100 w-full">
-        <Wrapper><Navbar/><main>{children}</main></Wrapper></body>
+        <Wrapper>
+          <Navbar />
+          <main>{children}</main>
+        </Wrapper>
+      </body>
     </html>
   )
 }

@@ -4,5 +4,5 @@
 @tailwind variants;
 
 .link {
-    @apply text-secondary-100 
+    @apply text-secondary-100 font-semibold
 }
