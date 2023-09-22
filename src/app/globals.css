@@ -6,3 +6,19 @@
 .link {
     @apply text-secondary-100 font-semibold
 }
+
+.gradient {
+    background: hsla(179, 41%, 32%, 1);
+    background: linear-gradient(90deg, #1A1423 0%, #307473 100%);
+    background: -moz-linear-gradient(90deg, #1A1423 0%, #307473 100%);
+    background: -webkit-linear-gradient(90deg, #1A1423 0%, #307473 100%);
+}
+
+.shadow {
+    box-shadow: #233A42 10px 10px 0px -3px, #307473 10px 10px;
+}
+
+.shadow:hover {
+    box-shadow: #233A42 -10px -10px 0px -3px, #307473 -10px -10px;
+    transition: all .5s ease-in-out
+}
