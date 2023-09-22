@@ -16,9 +16,21 @@
 
 .shadow {
     box-shadow: #233A42 10px 10px 0px -3px, #307473 10px 10px;
+      transition: all .5s ease-in-out
 }
 
-.shadow:hover {
+.shadow:hover,
+.shadow:focus {
     box-shadow: #233A42 -10px -10px 0px -3px, #307473 -10px -10px;
-    transition: all .5s ease-in-out
+}
+
+.catShadow {
+    border: none;
+     box-shadow: #1A1423 inset 0px 0px 80px;
+     transition: all .5s ease-in-out
+}
+
+.catShadow:hover {
+   
+    box-shadow: #1A1423 inset 0px 0px 24px;
 }

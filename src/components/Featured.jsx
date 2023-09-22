@@ -9,7 +9,7 @@ const Featured = () => {
 			<h4 className='text-4xl text-secondary-100 leading-[60px]'>
 				Weterynaryjny głos z płyty gnojowej...
 			</h4>
-			<div className='gradient mt-10 w-full h-[600px] p-8 md:p-20 flex flex-col  justify-center md:flex-row md:items-center  md:justify-between gap-12 md:gap-6 overflow-hidden'>
+			<div className='gradient mt-10 w-full p-8 md:p-20 flex flex-col  justify-center md:flex-row md:items-center  md:justify-between gap-12 md:gap-6 overflow-hidden'>
 				<div className='md:flex-1'>
 					<h2 className='text-xl md:text-4xl font-bold pb-6'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit
