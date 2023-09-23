@@ -1,14 +1,20 @@
 'use client';
 import React, { useState } from 'react';
+import {signIn,signOut, useSession} from 'next-auth/react'
 import Link from 'next/link';
+import Button from './Button';
 
 const AuthLink = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const [isLoggedIn, setIsLoggedIn] = useState(true)
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+	const { data, status } = useSession();
+    console.log(data, status)
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
 	};
+
 
 	const className = !isOpen
 		? ' rotate-[90deg] before:translate-x-[-11px]  after:rounded after:translate-x-[7px]'
@@ -18,21 +24,35 @@ const AuthLink = () => {
 
 	return (
 		<>
-			{!isLoggedIn && (
-				<Link href='/login' className='link hidden md:flex'>
-					Zaloguj
-				</Link>
+			{status !== 'authenticated' && (
+				<Button
+					url=''
+					title='Zaloguj'
+					variant='simpleNavButton'
+					source=''
+					onClick={() => signIn('google')}
+					type='button'
+				/>
 			)}
-			{isLoggedIn && (
-				<Link href='/logout' className='link hidden md:flex'>
-					Wyloguj
-				</Link>
+			{status === 'authenticated' && (
+				<>
+					{data.user.name === 'Klaudia Stopczyńska' && (
+						<Link href='/write' className='link hidden md:flex'>
+							Napisz
+						</Link>
+					)}
+
+					<Button
+						url=''
+						title='Wyloguj'
+						variant='simpleNavButton'
+						source=''
+						onClick={() => signOut('google')}
+						type='button'
+					/>
+				</>
 			)}
-			{isLoggedIn && (
-				<Link href='/write' className='link hidden md:flex'>
-					Napisz
-				</Link>
-			)}
+
 			<div className='flex md:hidden'>
 				<button className='h-[40px] w-[40px] ' onClick={toggleMenu}>
 					<div
@@ -52,20 +72,36 @@ const AuthLink = () => {
 						<Link href='/contact' className='link'>
 							Kontakt
 						</Link>
-						{!isLoggedIn && (
-							<Link href='/login' className='link'>
-								Zaloguj
-							</Link>
+						{status !== 'authenticated' && (
+							<Button
+								url=''
+								title='Zaloguj'
+								variant='simpleButton'
+								source=''
+								onClick={() => signIn('google')}
+								type='button'
+							/>
 						)}
-						{isLoggedIn && (
-							<Link href='/logout' className='link'>
-								Wyloguj
-							</Link>
-						)}
-						{isLoggedIn && (
-							<Link href='/write' className='link'>
-								Napisz
-							</Link>
+						{status === 'authenticated' && (
+							<>
+								{data.user.name === 'Klaudia Stopczyńska' && (
+									<Link
+										href='/write'
+										className='link flex md:hidden'
+									>
+										Napisz
+									</Link>
+								)}
+
+								<Button
+									url=''
+									title='Wyloguj'
+									variant='simpleButton'
+									source=''
+									onClick={() => signOut('google')}
+									type='button'
+								/>
+							</>
 						)}
 					</div>
 				)}

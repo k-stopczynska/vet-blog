@@ -1,18 +1,18 @@
-'use client'
-import React from 'react'
+'use client';
+import React from 'react';
+import Button from '@/components/Button';
 
 const page = () => {
-
-    const handleSubmit = (e) => {
+	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(e.target);
 	};
 
-    return (
+	return (
 		<form
 			method='POST'
 			onSubmit={handleSubmit}
-			className='w-full flex flex-col items-center gap-4'
+			className='w-full flex flex-col items-center gap-4 mb-10'
 		>
 			<input
 				name='message'
@@ -36,11 +36,15 @@ const page = () => {
 				className='bg-primary-100 border w-full p-4'
 				placeholder='Post'
 			/>
-			<button type='submit' className='bg-secondary-200 px-6 py-2 mb-10 w-[20%]'>
-				Wyślij
-			</button>
+			<Button
+				type='submit'
+				variant='simpleButton'
+				source=''
+				url=''
+				title='Wyślij'
+			/>
 		</form>
 	);
-}
+};
 
-export default page
+export default page;
