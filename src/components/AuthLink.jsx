@@ -6,15 +6,11 @@ import Button from './Button';
 
 const AuthLink = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const [isLoggedIn, setIsLoggedIn] = useState(false);
-
 	const { data, status } = useSession();
-    console.log(data, status)
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
 	};
-
 
 	const className = !isOpen
 		? ' rotate-[90deg] before:translate-x-[-11px]  after:rounded after:translate-x-[7px]'
@@ -28,7 +24,7 @@ const AuthLink = () => {
 				<Button
 					url=''
 					title='Zaloguj'
-					variant='simpleNavButton'
+					variant='simpleButton'
 					source=''
 					onClick={() => signIn('google')}
 					type='button'
@@ -45,9 +41,9 @@ const AuthLink = () => {
 					<Button
 						url=''
 						title='Wyloguj'
-						variant='simpleNavButton'
+						variant='simpleButton'
 						source=''
-						onClick={() => signOut('google')}
+						onClick={() => signOut()}
 						type='button'
 					/>
 				</>
@@ -98,7 +94,7 @@ const AuthLink = () => {
 									title='Wyloguj'
 									variant='simpleButton'
 									source=''
-									onClick={() => signOut('google')}
+									onClick={() => signOut()}
 									type='button'
 								/>
 							</>
