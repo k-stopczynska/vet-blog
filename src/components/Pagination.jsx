@@ -1,14 +1,17 @@
 'use client';
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import Button from './Button';
 
-const Pagination = () => {
+const Pagination = ({page}) => {
+
+	const router = useRouter()
 	const handlePrev = () => {
-		console.log('prev');
+		router.push(`?page=${page - 1}`)
 	};
 
 	const handleNext = () => {
-		console.log('next');
+		router.push(`?page=${page + 1}`);
 	};
 
 	return (

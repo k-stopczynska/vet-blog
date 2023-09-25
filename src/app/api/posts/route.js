@@ -4,7 +4,7 @@ import prisma from '@/utils/connect';
 
 export const GET = async(request) => {
     const { searchParams } = new URL(request.url);
-    const POSTS_PER_PAGE = 6;
+    const POSTS_PER_PAGE = 2;
     const page = searchParams.get('page');
     const cat = searchParams.get('category');
      const query = {
