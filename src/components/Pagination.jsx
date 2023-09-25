@@ -3,11 +3,11 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import Button from './Button';
 
-const Pagination = ({page}) => {
+const Pagination = ({page, hasPrev, hasNext}) => {
 
 	const router = useRouter()
 	const handlePrev = () => {
-		router.push(`?page=${page - 1}`)
+		router.push(`?page=${page - 1}`);
 	};
 
 	const handleNext = () => {
@@ -23,6 +23,7 @@ const Pagination = ({page}) => {
 				source=''
 				onClick={handlePrev}
 				type='button'
+				disabled={!hasPrev}
 			/>
 			<Button
 				url=''
@@ -31,6 +32,7 @@ const Pagination = ({page}) => {
 				source=''
 				onClick={handleNext}
 				type='button'
+				disabled={!hasNext}
 			/>
 		</div>
 	);

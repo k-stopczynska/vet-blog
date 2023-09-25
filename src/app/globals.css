@@ -4,103 +4,103 @@
 @tailwind variants;
 
 .link {
-    @apply text-secondary-100 font-semibold
+	@apply text-secondary-100 font-semibold;
 }
 
 .gradient {
-    background: hsla(179, 41%, 32%, 1);
-    background: linear-gradient(90deg, #1A1423 0%, #307473 100%);
-    background: -moz-linear-gradient(90deg, #1A1423 0%, #307473 100%);
-    background: -webkit-linear-gradient(90deg, #1A1423 0%, #307473 100%);
+	background: hsla(179, 41%, 32%, 1);
+	background: linear-gradient(90deg, #1a1423 0%, #307473 100%);
+	background: -moz-linear-gradient(90deg, #1a1423 0%, #307473 100%);
+	background: -webkit-linear-gradient(90deg, #1a1423 0%, #307473 100%);
 }
 
 .shadow {
-    box-shadow: #233A42 10px 10px 0px -3px, #307473 10px 10px;
-    transition: all .5s ease-in-out
+	box-shadow: #233a42 10px 10px 0px -3px, #307473 10px 10px;
+	transition: all 0.5s ease-in-out;
 }
 
 .shadow:hover,
 .shadow:focus {
-    box-shadow: #233A42 -10px -10px 0px -3px, #307473 -10px -10px;
+	box-shadow: #233a42 -10px -10px 0px -3px, #307473 -10px -10px;
 }
 
 .catShadow {
-    border: none;
-    box-shadow: #1A1423 inset 0px 0px 80px;
-    transition: all .5s ease-in-out;
+	border: none;
+	box-shadow: #1a1423 inset 0px 0px 80px;
+	transition: all 0.5s ease-in-out;
 }
 
 .catShadow:hover {
-    box-shadow: #1A1423 inset 0px 0px 24px;
+	box-shadow: #1a1423 inset 0px 0px 24px;
 }
 
 .cardContainer {
-    transform-style: preserve-3d;
-    transition: rotate .5s ease;
+	transform-style: preserve-3d;
+	transition: rotate 0.5s ease;
 }
 
 .cardContainer:hover {
-    rotate: x 20deg;
+	rotate: x 20deg;
 }
 
 .cardContainer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 100;
-  background-image: radial-gradient(circle, transparent 150px, black);
-  opacity: 0;
-  transition: opacity .5s;
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 100;
+	background-image: radial-gradient(circle, transparent 150px, black);
+	opacity: 0;
+	transition: opacity 0.5s;
 }
 
 .cardContainer:hover::before {
-  opacity: 1;
+	opacity: 1;
 }
 
 .cardContainer:hover::after {
-  rotate: x calc(20deg * -1);
-  translate: 0 30px;
+	rotate: x calc(20deg * -1);
+	translate: 0 30px;
 }
 
 .cardContainer::after {
-  content: "";
-  position: absolute;
-  inset: 50% 0.5rem -0.5rem;
-  translate: 0;
-  transform: translateZ(-100px);
-  background: hsla(179, 41%, 32%, 1);
-  filter: blur(2rem);
-  z-index: 1;
-  transition: rotate .5s, translate(20deg);
+	content: '';
+	position: absolute;
+	inset: 50% 0.5rem -0.5rem;
+	translate: 0;
+	transform: translateZ(-100px);
+	background: hsla(179, 41%, 32%, 1);
+	filter: blur(2rem);
+	z-index: 1;
+	transition: rotate 0.5s, translate(20deg);
 }
 
 .cardText,
-.cardDate, 
+.cardDate,
 .cardCat {
-  z-index: 1000;
-  margin-inline: auto;
-  transform: translateY(0rem) translateZ(20px);
-  transition: .5s;
+	z-index: 1000;
+	margin-inline: auto;
+	transform: translateY(0rem) translateZ(20px);
+	transition: 0.5s;
 }
 
 .cardText {
-   inset: auto 0 2rem;  
+	inset: auto 0 2rem;
 }
 
-.cardDate, 
+.cardDate,
 .cardCat {
-  inset: auto 1rem;
-  font-size: .5rem;
-  text-transform: uppercase;
+	inset: auto 1rem;
+	font-size: 0.5rem;
+	text-transform: uppercase;
 }
 
 .cardCat {
-    color:  #0de3e0;
+	color: #0de3e0;
 }
 
 .cardContainer:hover .cardText,
 .cardContainer:hover .cardCat,
 .cardContainer:hover .cardDate {
-  transform: translateY(-2rem) translateZ(20px) scale(1.2);
-  rotate: x calc(20deg * -1);
+	transform: translateY(-2rem) translateZ(20px) scale(1.2);
+	rotate: x calc(20deg * -1);
 }

@@ -2,29 +2,34 @@ import React from 'react';
 import Card from './Card';
 import Pagination from '@/components/Pagination';
 
-	const getPosts = async(page) => {
-		const response = await fetch(`http://localhost:3000/api/posts?page=${page}`, {
+const getPosts = async (page) => {
+	const response = await fetch(
+		`http://localhost:3000/api/posts?page=${page}`,
+		{
 			cache: 'no-store',
-		});
-		if (!response.ok) {
-			throw new Error('Loading posts failed...');
-		}
-		return response.json();
-	};
+		},
+	);
+	if (!response.ok) {
+		throw new Error('Loading posts failed...');
+	}
+	return response.json();
+};
 
-const CardList = async({page}) => {
-
-	const cards = await getPosts(page);
+const CardList = async ({ page }) => {
+	const POSTS_PER_PAGE = 6;
+	const { posts, count } = await getPosts(page);
+	const hasPrev = POSTS_PER_PAGE * (page - 1) > 0;
+	const hasNext = POSTS_PER_PAGE * (page - 1) + POSTS_PER_PAGE < count;
 
 	return (
 		<>
 			<h3 className='text-lg md:text-2xl font-bold mb-4'>Posty</h3>
 			<div className='flex flex-wrap justify-center xl:justify-between gap-10'>
-				{cards?.map((card) => (
+				{posts?.map((card) => (
 					<Card {...card} key={card._id} />
 				))}
 			</div>
-			<Pagination page={page} />
+			<Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} />
 		</>
 	);
 };

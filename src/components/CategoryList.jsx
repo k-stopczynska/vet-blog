@@ -27,36 +27,6 @@ const categories = await getCategories()
 						source={category.img}
 					/>
 				))}
-				{/* <Button
-					url='/'
-					title='weterynaria'
-					variant='category'
-					source='/cow.png'
-				/>
-				<Button
-					url='/'
-					title='RPG'
-					variant='category'
-					source='/dice.png'
-				/>
-				<Button
-					url='/'
-					title='gry'
-					variant='category'
-					source='/console.png'
-				/>
-				<Button
-					url='/'
-					title='zwierzaki'
-					variant='category'
-					source='/pet.png'
-				/>
-				<Button
-					url='/'
-					title='lifestyle'
-					variant='category'
-					source='/lifestyle.png'
-				/> */}
 			</div>
 		</section>
 	);
