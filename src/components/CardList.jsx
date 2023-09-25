@@ -2,9 +2,9 @@ import React from 'react';
 import Card from './Card';
 import Pagination from '@/components/Pagination';
 
-const getPosts = async (page) => {
+const getPosts = async (page, category) => {
 	const response = await fetch(
-		`http://localhost:3000/api/posts?page=${page}`,
+		`http://localhost:3000/api/posts?page=${page}&cat=${category}`,
 		{
 			cache: 'no-store',
 		},
@@ -15,9 +15,9 @@ const getPosts = async (page) => {
 	return response.json();
 };
 
-const CardList = async ({ page }) => {
+const CardList = async ({ page, category }) => {
 	const POSTS_PER_PAGE = 6;
-	const { posts, count } = await getPosts(page);
+	const { posts, count } = await getPosts(page, category);
 	const hasPrev = POSTS_PER_PAGE * (page - 1) > 0;
 	const hasNext = POSTS_PER_PAGE * (page - 1) + POSTS_PER_PAGE < count;
 

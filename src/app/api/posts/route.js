@@ -6,17 +6,17 @@ export const GET = async(request) => {
     const { searchParams } = new URL(request.url);
     const POSTS_PER_PAGE = 6;
     const page = searchParams.get('page');
-    const cat = searchParams.get('category');
-     const query = {
+    const cat = searchParams.get('cat');
+    const query = {
     take: POSTS_PER_PAGE,
     skip: POSTS_PER_PAGE * (page - 1),
     where: {
-      ...(cat && { catSlug: cat }),
+      ...(cat && { categorySlug: cat }),
     },
   };
 
     try {
-        const [posts, count] = await prisma.$transaction([
+      const [posts, count] = await prisma.$transaction([
       prisma.post.findMany(query),
       prisma.post.count({ where: query.where }),
         ]);
