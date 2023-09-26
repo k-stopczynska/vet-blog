@@ -2,11 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Card = ({ title, url, img, createdAt, categorySlug, slug }) => {
+const Card = ({ title, url, img, createdAt, categorySlug, slug, key }) => {
 	return (
 		<Link
 			href={`/posts/${slug}`}
 			className='w-[300px] h-[400px] relative p-10 cardContainer'
+			key={key}
 		>
 			{img && <Image src={img} alt='' fill={true} />}
 			<p className='cardDate'>
