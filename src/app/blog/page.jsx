@@ -3,14 +3,14 @@ import CardList from '@/components/CardList';
 
 const page = ({ searchParams }) => {
 	const page = parseInt(searchParams.page) || 1;
-	const category = searchParams.category || '';
+	const { category } = searchParams;
 
 	return (
 		<div>
 			<h1 className='text-4xl font-bold text-center mt-20 mb-10 capitalize'>
-        {category}
+				{category}
 			</h1>
-      <CardList page={page} category={category} />
+			<CardList page={page} category={category} />
 		</div>
 	);
 };

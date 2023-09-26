@@ -2,13 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Card = ({ title, url, img, createdAt, categorySlug }) => {
+const Card = ({ title, url, img, createdAt, categorySlug, slug }) => {
 	return (
 		<Link
-			href=''
+			href={`/posts/${slug}`}
 			className='w-[300px] h-[400px] relative p-10 cardContainer'
 		>
-			<Image src={img} alt='' fill={true} />
+			{img && <Image src={img} alt='' fill={true} />}
 			<p className='cardDate'>
 				{createdAt.split('T')[0]}
 				<span className='cardCat pl-2'>{categorySlug}</span>

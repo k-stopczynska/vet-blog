@@ -19,7 +19,7 @@ export const GET = async(request) => {
       const [posts, count] = await prisma.$transaction([
       prisma.post.findMany(query),
       prisma.post.count({ where: query.where }),
-        ]);
+      ]);
       return new NextResponse(JSON.stringify({ posts, count }, { status: 200 }));
     } catch (err) {
         console.log(err);
