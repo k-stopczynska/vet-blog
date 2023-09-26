@@ -25,7 +25,7 @@ const page = () => {
 		const post = {
 			title: e.target[0].value,
 			slug: slugify(e.target[0].value),
-			// categorySlug: e.target[1].value || 'weterynaria',
+			categorySlug: e.target[1].value,
 			img: e.target[2].value,
 			desc: e.target[3].value,
 		};
@@ -37,11 +37,8 @@ const page = () => {
 
 		if (response.status === 200) {
 			const data = await response.json();
-			// router.push(`/posts/${data.slug}`);
-			console.log(data)
+			router.push(`/posts/${data.slug}`);
 		}
-
-		console.log(data);
 	};
 
 	return (
