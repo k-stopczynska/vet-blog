@@ -5,7 +5,7 @@ import Button from './Button';
 
 const CommentInput = () => {
 	const { status } = useSession();
-	console.log(status)
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(e.target[0].value)
