@@ -26,7 +26,6 @@ const Comments = ({ postSlug }) => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		console.log(e.target[0].value, postSlug)
 		await fetch('/api/comments', {
 			method: 'POST',
 			body: JSON.stringify({ desc: e.target[0].value, postSlug }),

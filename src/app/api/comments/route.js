@@ -22,7 +22,7 @@ export const GET = async (req) => {
 }
 
 export const POST = async (req) => {
-    const session = getAuthSession();
+    const session = await getAuthSession();
     if (!session) {
         return new NextResponse(
             JSON.stringify({ message: 'You are not authorized!' }, { status: 401 }))
@@ -30,7 +30,6 @@ export const POST = async (req) => {
 
     try {
         const body = await req.json();
-
         const comment = await prisma.comment.create({
             data: {...body, userEmail: session.user.email},
         })
