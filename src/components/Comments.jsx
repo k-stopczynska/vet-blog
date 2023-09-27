@@ -31,6 +31,7 @@ const Comments = ({ postSlug }) => {
 			body: JSON.stringify({ desc: e.target[0].value, postSlug }),
 		});
 		mutate();
+		e.target[0].value = '';
 	};
 
 	return (

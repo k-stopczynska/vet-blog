@@ -29,8 +29,8 @@ const page = () => {
 			title: e.target[0].value,
 			slug: slugify(e.target[0].value),
 			categorySlug: e.target[1].value,
-			img: e.target[2].value,
-			desc: e.target[3].value,
+			img: e.target[2].value || e.target[3].value,
+			desc: e.target[4].value,
 		};
 
 		const response = await fetch('/api/posts', {
@@ -63,11 +63,23 @@ const page = () => {
 				<option value='zwierzaki'>Zwierzaki</option>
 				<option value='lifestyle'>Lifestyle</option>
 			</select>
-			<input
-				name='message'
-				placeholder='Image URL'
-				className='bg-primary-100 border w-full p-4'
-			/>
+			<div className='flex w-full'>
+				<input
+					name='message'
+					placeholder='Image URL'
+					className='bg-primary-100 border w-full p-4 flex-1 pr-2'
+				/>
+				or choose one
+				<select className='bg-primary-100 border w-full p-4 flex-1 pl-2'>
+					<option value=''>Choose image</option>
+					<option value='/street.jpg'>Ulica</option>
+					<option value='/street2.jpg'>Ulica 2</option>
+					<option value='/forest.jpg'>Las</option>
+					<option value='/forest2.jpg'>Las 2</option>
+					<option value='/mountain.jpg'>Góry</option>
+					<option value='/mountain2.jpg'>Góry 2</option>
+				</select>
+			</div>
 			<textarea
 				name='message'
 				rows={20}
