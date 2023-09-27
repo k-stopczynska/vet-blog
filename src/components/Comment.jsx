@@ -1,7 +1,7 @@
 import React from 'react';
 import Author from './Author';
 
-const Comment = ({ user, image, createdAt, desc, key }) => {
+const Comment = ({ user, image, createdAt, desc }) => {
 	return (
 		<div className="flex flex-col w-full max-h-min border gap-4 p-4 shadow-light-100 shadow-sm">
 			<p>{desc}</p>
