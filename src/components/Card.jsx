@@ -15,7 +15,7 @@ const Card = ({ title, url, img, createdAt, categorySlug, slug, key }) => {
 				<span className='cardCat pl-2'>{categorySlug}</span>
 			</p>
 			<h3 className='absolute bottom-4 left-0 right-0 p-10 text-center text-2xl font-bold cardText'>
-				{title}
+				{title.trim().split(' ').slice(0, 8).join(' ')}
 			</h3>
 		</Link>
 	);
