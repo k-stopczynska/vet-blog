@@ -3,13 +3,13 @@ import React from 'react';
 import { useSession } from 'next-auth/react';
 import Button from './Button';
 
-const CommentInput = () => {
+const CommentInput = ({handleSubmit}) => {
 	const { status } = useSession();
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		console.log(e.target[0].value)
-	}
+	// const handleSubmit = (e) => {
+	// 	e.preventDefault();
+	// 	console.log(e.target[0].value)
+	// }
 	return (
 		<>
 			{status !== 'authenticated' && (
