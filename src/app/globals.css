@@ -28,12 +28,13 @@
 	border: none;
 	box-shadow: #1a1423 inset 0px 0px 80px;
 	transition: all 0.5s ease-in-out;
-	color: #E4FDE1;
+	color: #e4fde1;
 }
 
-.catShadow:hover {
+.catShadow:hover,
+.catShadow:focus		 {
 	box-shadow: #1a1423 inset 0px 0px 24px;
-	color:#1a1423;
+	color: #1a1423;
 }
 
 .cardContainer {
@@ -41,7 +42,8 @@
 	transition: rotate 0.5s ease;
 }
 
-.cardContainer:hover {
+.cardContainer:hover,
+.cardContainer:focus {
 	rotate: x 20deg;
 }
 
@@ -55,11 +57,13 @@
 	transition: opacity 0.5s;
 }
 
-.cardContainer:hover::before {
+.cardContainer:hover::before,
+.cardContainer:focus::before {
 	opacity: 1;
 }
 
-.cardContainer:hover::after {
+.cardContainer:hover::after,
+.cardContainer:focus::after {
 	rotate: x calc(20deg * -1);
 	translate: 0 30px;
 }
@@ -92,7 +96,7 @@
 .cardDate,
 .cardCat {
 	inset: auto 1rem;
-	font-size: 0.5rem;
+	font-size: 0.8rem;
 	text-transform: uppercase;
 }
 
@@ -102,9 +106,10 @@
 
 .cardContainer:hover .cardText,
 .cardContainer:hover .cardCat,
-.cardContainer:hover .cardDate {
+.cardContainer:hover .cardDate,
+.cardContainer:focus .cardText,
+.cardContainer:focus .cardCat,
+.cardContainer:focus .cardDate {
 	transform: translateY(-2rem) translateZ(20px) scale(1.2);
 	rotate: x calc(20deg * -1);
 }
-
-

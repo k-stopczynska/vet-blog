@@ -12,15 +12,18 @@ export const GET = async(request) => {
     skip: POSTS_PER_PAGE * (page - 1),
     where: {
       ...(cat && { categorySlug: cat }),
-    },
+      },
+        orderBy: {
+          createdAt: 'desc'
+        }
   };
 
     try {
       const [posts, count] = await prisma.$transaction([
-      prisma.post.findMany(query),
+        prisma.post.findMany( query),
       prisma.post.count({ where: query.where }),
       ]);
-      return new NextResponse(JSON.stringify({ posts, count }, { status: 200 }));
+      return new NextResponse(JSON.stringify({posts, count }, { status: 200 }));
     } catch (err) {
         console.log(err);
         return new NextResponse(JSON.stringify({message: 'Something went wrong'}, {status: 500}))

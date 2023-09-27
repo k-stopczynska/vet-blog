@@ -9,7 +9,7 @@ const Card = ({ title, url, img, createdAt, categorySlug, slug, key }) => {
 			className='w-[300px] h-[400px] relative p-10 cardContainer'
 			key={key}
 		>
-			{img && <Image src={img} alt='' fill={true} />}
+			{img && <Image src={img} alt='' fill />}
 			<p className='cardDate'>
 				{createdAt.split('T')[0]}
 				<span className='cardCat pl-2'>{categorySlug}</span>
