@@ -1,7 +1,22 @@
 import React from 'react';
 import Button from './Button';
 
-const Featured = () => {
+const getPosts = async (page, category) => {
+	const response = await fetch(
+		`http://localhost:3000/api/posts?page=${page}&cat=${category || ''}`,
+		{
+			cache: 'no-store',
+		},
+	);
+	if (!response.ok) {
+		throw new Error('Loading posts failed...');
+	}
+	return response.json();
+};
+
+const Featured = async() => {
+	const { posts, count } = await getPosts(1, '');
+	const { title, url, img, createdAt, categorySlug, slug, key, desc } = posts[0];
 
 	return (
 		<article className='pt-10'>
@@ -12,18 +27,16 @@ const Featured = () => {
 			<div className='gradient mt-10 w-full p-8 md:p-20 flex flex-col  justify-center md:flex-row md:items-center  md:justify-between gap-12 md:gap-6 overflow-hidden'>
 				<div className='md:flex-1'>
 					<h2 className='text-xl md:text-4xl font-bold pb-6'>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit
+						{title}
 					</h2>
-					{/* // TODO: path to blog post in url */}
-					<Button title='Czytaj dalej' variant='CTA' url='/' />
+					<Button
+						title='Czytaj dalej'
+						variant='CTA'
+						url={`/posts/${slug}`}
+					/>
 				</div>
 				<p className='text-base md:text-lg md:flex-1'>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-					ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					Duis aute irure dolor in reprehenderit in voluptate velit
-					esse cillum dolore eu fugiat nulla pariatur.
+					{desc.substring(0, 400)}...
 				</p>
 			</div>
 		</article>
