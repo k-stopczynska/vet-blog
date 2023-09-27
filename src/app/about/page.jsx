@@ -12,7 +12,7 @@ const page = () => {
 				<Image
 					src='/men.jpg'
 					fill
-					className='z-10 opacity-30 blur hover:blur-sm hover:invert transition duration-1000 '
+					className='z-10 opacity-30 blur hover:blur-sm hover:invert hover:saturate-200 transition duration-1000 '
 				/>
 
 				<p className='z-20 pb-4 text-justify transition duration-700'>
