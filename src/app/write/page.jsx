@@ -8,8 +8,11 @@ const page = () => {
 	const router = useRouter();
 	const { status, data } = useSession();
 
-	if (status === 'unauthenticated' || data?.user.name !== 'Klaudia Stopczyńska') {
-		router.push('/')
+	if (
+		status === 'unauthenticated' ||
+		data?.user.name !== 'Klaudia Stopczyńska'
+	) {
+		router.push('/');
 	}
 
 	const slugify = (str) =>
@@ -67,7 +70,7 @@ const page = () => {
 			/>
 			<textarea
 				name='message'
-				rows={30}
+				rows={20}
 				className='bg-primary-100 border w-full p-4'
 				placeholder='Post'
 			/>
