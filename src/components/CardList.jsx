@@ -24,7 +24,7 @@ const CardList = async ({ page, category }) => {
 	return (
 		<>
 			<h3 className='text-lg md:text-2xl font-bold mb-4'>Posty</h3>
-			<div className='flex flex-wrap justify-center xl:justify-between gap-10'>
+			<div className='flex flex-wrap justify-center md:justify-between gap-10'>
 				{posts.map((card) => (
 					<Card {...card} key={card._id} />
 				))}
