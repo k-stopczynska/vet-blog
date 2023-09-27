@@ -1,11 +1,11 @@
 import React from 'react';
 import Author from './Author';
 
-const Comment = ({ author, image, timestamp, comment }) => {
+const Comment = ({ user, image, createdAt, desc, key }) => {
 	return (
 		<div className="flex flex-col w-full max-h-min border gap-4 p-4 shadow-light-100 shadow-sm">
-			<p>{comment}</p>
-			<Author author={author} image={image} timestamp={timestamp} />
+			<p>{desc}</p>
+			<Author author={user.name} image={user.image} timestamp={createdAt.split('T')[0]} />
 		</div>
 	);
 };

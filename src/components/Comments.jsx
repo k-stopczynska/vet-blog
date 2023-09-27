@@ -8,19 +8,16 @@ import Comment from './Comment';
 
 const fetcher = async (url) => {
 	const res = await fetch(url);
-
 	const data = await res.json();
 
 	if (!res.ok) {
 		const error = new Error(data.message);
 		throw error;
 	}
-
 	return data;
 };
 
 const Comments = ({ postSlug }) => {
-	const { status } = useSession();
 
 	const { data, mutate, isLoading } = useSWR(
 		`http://localhost:3000/api/comments?postSlug=${postSlug}`,
@@ -42,7 +39,7 @@ const Comments = ({ postSlug }) => {
 			<CommentInput handleSubmit={handleSubmit} />
 			<div className='flex flex-col gap-4 mt-10'>
 				{data?.map((comment) => (
-					<Comment {...comment} />
+					<Comment {...comment} key={comment._id} />
 				))}
 			</div>
 		</section>

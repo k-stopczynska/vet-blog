@@ -48,7 +48,7 @@ const page = async ({ params }) => {
 			<p className='text-base md:text-lg text-justify '>
 				{desc}
 			</p>
-			<Comments />
+			<Comments postSlug={slug} />
 		</article>
 	);
 };

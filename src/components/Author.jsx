@@ -2,7 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 
 const Author = ({ author, timestamp, image }) => {
-	const [name, surname] = author.split(' ');
+	const [name, surname] = author?.split(' ');
+
 	return (
 		<div className='flex items-center gap-2 lg:mb-0'>
 			<Image
@@ -16,7 +17,9 @@ const Author = ({ author, timestamp, image }) => {
 				<p>{timestamp}</p>
 				<p className='uppercase text-[#0de3e0]'>
 					{name}
-					<span className='text-light-100 pl-1'>{surname}</span>
+					<span className='text-light-100 pl-1'>
+						{surname}
+					</span>
 				</p>
 			</div>
 		</div>
