@@ -10,7 +10,7 @@ const Navbar = () => {
 					Wyprany z empatii.blog
 				</h3>
 			</Link>
-			<div className='flex gap-4 text-base lg:text-xl'>
+			<div className='flex items-center gap-4 text-base lg:text-xl'>
 				<Link href='/blog' className='link hidden md:flex'>
 					Blog
 				</Link>
