@@ -35,7 +35,7 @@ const Comments = ({ postSlug }) => {
 
 	return (
 		<section>
-			<h3 className='text-lg md:text-2xl font-bold mb-4'>Komentarze</h3>
+			<h2 className='text-lg md:text-2xl font-bold mb-4'>Komentarze</h2>
 			<CommentInput handleSubmit={handleSubmit} />
 			<div className='flex flex-col gap-4 mt-10'>
 				{data?.map((comment) => (
