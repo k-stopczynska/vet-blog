@@ -18,7 +18,7 @@ const {status} = useSession()
 					<textarea
 						name='message'
 						rows={5}
-						className='text-primary-100 w-full p-4'
+						className='text-primary-100 bg-light-100 w-full p-4'
 					/>
 					<Button
 						type='submit'
