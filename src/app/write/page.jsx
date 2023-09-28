@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import Button from '@/components/Button';
 
@@ -8,12 +8,12 @@ export default function WritePage() {
 	const router = useRouter();
 	const { status, data } = useSession();
 
-	if (
-		status === 'unauthenticated' ||
-		data?.user.name !== 'Klaudia Stopczyńska'
-	) {
-		router.push('/');
-	}
+	// if (
+	// 	status === 'unauthenticated' ||
+	// 	data?.user.name !== 'Klaudia Stopczyńska'
+	// ) {
+	// 	return router.push('/');
+	// }
 
 	const slugify = (str) =>
 		str
@@ -40,7 +40,7 @@ export default function WritePage() {
 
 		if (response.status === 200) {
 			const data = await response.json();
-			router.push(`/posts/${data.slug}`);
+			// return router.push(`/posts/${data.slug}`);
 		}
 	};
 
