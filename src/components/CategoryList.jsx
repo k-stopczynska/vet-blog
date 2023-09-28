@@ -2,7 +2,9 @@ import React from 'react';
 import Button from './Button';
 
 const getCategories = async () => {
-	const response = await fetch('http://localhost:3000/api/categories');
+	const response = await fetch(
+		'https://wypranyzempatii.vercel.app/api/categories',
+	);
 	if (!response.ok) {
 		throw new Error('Loading categories failed...');
 	}
