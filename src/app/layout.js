@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <AuthProvider>
-        <body className="bg-primary-100 text-light-100 w-full">
+        <body className="bg-primary-100 font-plex text-light-100 w-full">
           <Wrapper>
             <Navbar />
             <main>{children}</main>

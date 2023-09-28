@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["Open sans", ...defaultTheme.fontFamily.sans],
+       'plex': ["IBM Plex Mono", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         'primary-100': '#1A1423', //almost black
