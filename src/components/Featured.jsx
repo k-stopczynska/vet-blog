@@ -4,9 +4,6 @@ import Button from './Button';
 const getPosts = async (page, category) => {
 	const response = await fetch(
 		`http://localhost:3000/api/posts?page=${page}&cat=${category || ''}`,
-		{
-			cache: 'no-store',
-		},
 	);
 	if (!response.ok) {
 		throw new Error('Loading posts failed...');
@@ -14,9 +11,9 @@ const getPosts = async (page, category) => {
 	return response.json();
 };
 
-const Featured = async() => {
-	const { posts, count } = await getPosts(1, '');
-	const { title, url, img, createdAt, categorySlug, slug, key, desc } = posts[0];
+const Featured = async () => {
+	const { posts } = await getPosts(1, '');
+	const { title, slug, desc } = posts[0];
 
 	return (
 		<article className='pt-10'>

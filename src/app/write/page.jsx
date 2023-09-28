@@ -72,12 +72,12 @@ const page = () => {
 				or choose one
 				<select className='bg-primary-100 border w-full p-4 flex-1 pl-2'>
 					<option value=''>Choose image</option>
-					<option value='/street.jpg'>Ulica</option>
-					<option value='/street2.jpg'>Ulica 2</option>
-					<option value='/forest.jpg'>Las</option>
-					<option value='/forest2.jpg'>Las 2</option>
-					<option value='/mountain.jpg'>Góry</option>
-					<option value='/mountain2.jpg'>Góry 2</option>
+					<option value='/street.jpeg'>Ulica</option>
+					<option value='/street2.jpeg'>Ulica 2</option>
+					<option value='/forest.jpeg'>Las</option>
+					<option value='/forest2.jpeg'>Las 2</option>
+					<option value='/mountain.jpeg'>Góry</option>
+					<option value='/mountain2.jpeg'>Góry 2</option>
 				</select>
 			</div>
 			<textarea

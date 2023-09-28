@@ -1,17 +1,16 @@
 import React from 'react';
 import Button from './Button';
 
-	const getCategories = async () => {
-		const response = await fetch('http://localhost:3000/api/categories', { cache: 'no-store' });
-		if (!response.ok) {
-			throw new Error('Loading categories failed...');
-		}
-		return response.json();
-	};
+const getCategories = async () => {
+	const response = await fetch('http://localhost:3000/api/categories');
+	if (!response.ok) {
+		throw new Error('Loading categories failed...');
+	}
+	return response.json();
+};
 
-const CategoryList = async() => {
-
-const categories = await getCategories()
+const CategoryList = async () => {
+	const categories = await getCategories();
 	return (
 		<section className='mt-20'>
 			<h3 className='text-lg md:text-2xl font-bold mb-4'>

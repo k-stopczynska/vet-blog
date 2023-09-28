@@ -5,9 +5,6 @@ import Pagination from '@/components/Pagination';
 const getPosts = async (page, category) => {
 	const response = await fetch(
 		`http://localhost:3000/api/posts?page=${page}&cat=${category || ''}`,
-		{
-			cache: 'no-store',
-		},
 	);
 	if (!response.ok) {
 		throw new Error('Loading posts failed...');

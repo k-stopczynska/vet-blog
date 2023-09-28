@@ -3,10 +3,8 @@ import Image from 'next/image';
 import Author from '@/components/Author';
 import Comments from '@/components/Comments';
 
-const getPost = async(slug) => {
-	const response = await fetch(`http://localhost:3000/api/posts/${slug}`, {
-		cache: 'no-store',
-	});
+const getPost = async (slug) => {
+	const response = await fetch(`http://localhost:3000/api/posts/${slug}`);
 	if (!response.ok) {
 		throw new Error('fetching this post failed, try again');
 	}
@@ -14,10 +12,9 @@ const getPost = async(slug) => {
 };
 
 const page = async ({ params }) => {
-
 	const { slug } = params;
 	const post = await getPost(slug);
-	
+
 	const { title, desc, createdAt, user, img, categorySlug } = post;
 	const categoryImages = {
 		weterynaria: '/cow.png',
@@ -29,7 +26,6 @@ const page = async ({ params }) => {
 
 	return (
 		<article className='gradient mt-10 w-full p-8 md:p-20 flex flex-col justify-center gap-12 '>
-			
 			<div className='flex flex-col items-center justify-between lg:flex-row'>
 				<div className='flex flex-col justify-between h-[300px] flex-1'>
 					<h2 className='text-xl md:text-4xl font-bold pb-6'>
@@ -45,9 +41,7 @@ const page = async ({ params }) => {
 					<Image src={img} alt='' fill />
 				</div>
 			</div>
-			<p className='text-base md:text-lg text-justify '>
-				{desc}
-			</p>
+			<p className='text-base md:text-lg text-justify '>{desc}</p>
 			<Comments postSlug={slug} />
 		</article>
 	);

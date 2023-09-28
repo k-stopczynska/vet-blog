@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Card = ({ title, url, img, createdAt, categorySlug, slug, key }) => {
+const Card = ({ title, img, createdAt, categorySlug, slug, key }) => {
 	return (
 		<Link
 			href={`/posts/${slug}`}
