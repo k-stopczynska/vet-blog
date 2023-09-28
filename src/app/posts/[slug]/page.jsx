@@ -11,7 +11,7 @@ const getPost = async (slug) => {
 	return response.json();
 };
 
-const PostPage = async ({ params }) => {
+export default async function PostPage({ params }) {
 	const { slug } = params;
 	const post = await getPost(slug);
 

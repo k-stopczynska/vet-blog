@@ -1,7 +1,7 @@
 import React from 'react';
 import CardList from '@/components/CardList';
 
-const BlogPage = ({ searchParams }) => {
+export default function BlogPage({ searchParams }) {
 	const page = parseInt(searchParams.page) || 1;
 	const { category } = searchParams;
 

@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import Button from '@/components/Button';
 
-const WritePage = () => {
+export default function WritePage() {
 	const router = useRouter();
 	const { status, data } = useSession();
 
@@ -107,5 +107,4 @@ const WritePage = () => {
 			/>
 		</form>
 	);
-};
-
+}

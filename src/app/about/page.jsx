@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const AboutPage = () => {
+export default function AboutPage() {
 	return (
 		<article className='gradient mt-10 w-full h-full p-8 md:p-20 flex flex-col gap-12 md:gap-6 overflow-hidden'>
 			<div className='relative h-full w-full aspect-[16/9] hover:text-[black] font-bold '>
