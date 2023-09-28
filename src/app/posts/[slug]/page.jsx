@@ -5,7 +5,7 @@ import Comments from '@/components/Comments';
 
 const getPost = async (slug) => {
 	const response = await fetch(
-		`http://wypranyzempatii.vercel.app/api/posts/${slug}`,
+		`https://wypranyzempatii.vercel.app/api/posts/${slug}`,
 	);
 	if (!response.ok) {
 		throw new Error('fetching this post failed, try again');
