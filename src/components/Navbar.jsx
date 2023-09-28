@@ -11,7 +11,10 @@ const Navbar = () => {
 				</h3>
 			</Link>
 			<div className='flex items-center gap-4 text-base lg:text-xl'>
-				<Link href='/blog' className='link hidden md:flex'>
+				<Link
+					href='/blog'
+					className='link hidden md:flex'
+				>
 					Blog
 				</Link>
 				<Link href='/about' className='link hidden md:flex'>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const Button = ({ url, title, variant, source, onClick, type, disabled }) => {
-	const baseClass = 'border px-6 py-3 ' ;
+	const baseClass = 'border px-6 py-3 ';
 	let variantClass;
 	let titleClass =
 		title === 'weterynaria'
@@ -22,10 +22,9 @@ const Button = ({ url, title, variant, source, onClick, type, disabled }) => {
 		variantClass = ` flex flex-col lg:flex-row gap-2 border-secondary-100  items-center justify-center w-40 bg-light-100 text-primary-100 font-bold uppercase catShadow ${baseClass} ${titleClass}`;
 	}
 	if (variant === 'simpleButton') {
-		variantClass =
-			disabled
-				? 'border px-6 py-3 opacity-50 cursor-not-allowed'
-				: 'bg-secondary-200 px-6 py-2';
+		variantClass = disabled
+			? 'border px-6 py-3 opacity-50 cursor-not-allowed'
+			: 'bg-secondary-200 px-6 py-2 hover:bg-light-100 focus:bglight-100 hover:text-secondary-200 focus:text-secondary-200 transition duration-700';
 	}
 	if (variant === 'simpleNavButton') {
 		variantClass = ' hidden bg-secondary-200 px-6 py-2 md:flex';
@@ -34,7 +33,9 @@ const Button = ({ url, title, variant, source, onClick, type, disabled }) => {
 	return (
 		<>
 			{variant === 'simpleButton' ? (
-				<button type={type} className={variantClass} onClick={onClick}>{title}</button>
+				<button type={type} className={variantClass} onClick={onClick}>
+					{title}
+				</button>
 			) : (
 				<Link href={url}>
 					<button className={variantClass}>

@@ -5,7 +5,7 @@
 @tailwind variants;
 
 .link {
-	@apply text-secondary-100 font-semibold;
+	@apply text-secondary-100 font-semibold hover:underline focus:underline hover:underline-offset-4 focus:underline-offset-4 decoration-2 decoration-current transition duration-500 ease-in;
 }
 
 .gradient {
@@ -33,7 +33,7 @@
 }
 
 .catShadow:hover,
-.catShadow:focus		 {
+.catShadow:focus {
 	box-shadow: #1a1423 inset 0px 0px 24px;
 	color: #1a1423;
 }
