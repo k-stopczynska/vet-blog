@@ -13,9 +13,9 @@ module.exports = {
     if (isServer) {
       config.plugins = [...config.plugins, new PrismaPlugin()]
     }
-
     return config
   },
+  nextConfig
 }
 
-module.exports = nextConfig
+// module.exports = nextConfig
