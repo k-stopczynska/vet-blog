@@ -12,6 +12,7 @@ const page = () => {
 				<Image
 					src='/men.jpg'
 					fill
+					alt=''
 					className='z-10 opacity-30 blur hover:blur-sm hover:invert hover:saturate-200 transition duration-1000 '
 				/>
 
