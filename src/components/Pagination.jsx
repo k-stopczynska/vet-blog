@@ -24,7 +24,6 @@ const Pagination = ({page, hasPrev, hasNext}) => {
 				onClick={handlePrev}
 				type='button'
 				disabled={!hasPrev}
-				name="previous"
 			/>
 			<Button
 				url=''
@@ -34,7 +33,6 @@ const Pagination = ({page, hasPrev, hasNext}) => {
 				onClick={handleNext}
 				type='button'
 				disabled={!hasNext}
-				name="next"
 			/>
 		</div>
 	);

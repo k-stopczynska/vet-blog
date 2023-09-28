@@ -24,7 +24,6 @@ const CategoryList = async () => {
 						title={category.title}
 						variant='category'
 						source={category.img}
-						name={`category ${category.title}`}
 					/>
 				))}
 			</div>

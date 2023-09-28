@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Button = ({ url, title, variant, source, onClick, type, disabled, name }) => {
+const Button = ({ url, title, variant, source, onClick, type, disabled }) => {
 	const baseClass = 'border px-6 py-3 ' ;
 	let variantClass;
 	let titleClass =
@@ -34,7 +34,7 @@ const Button = ({ url, title, variant, source, onClick, type, disabled, name }) 
 	return (
 		<>
 			{variant === 'simpleButton' ? (
-				<button type={type} name={name} className={variantClass} onClick={onClick}>{title}</button>
+				<button type={type} className={variantClass} onClick={onClick}>{title}</button>
 			) : (
 				<Link href={url}>
 					<button className={variantClass}>

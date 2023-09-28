@@ -37,7 +37,7 @@ const page = async ({ params }) => {
 						image={categoryImages[categorySlug]}
 					/>
 				</div>
-				<div className='lg:flex-1 h-[300px] w-full relative mt-10 lg:mt-0'>
+				<div className='lg:flex-1 aspect-auto w-full min-h-[300px] relative mt-10 lg:mt-0'>
 					<Image src={img} alt='' fill />
 				</div>
 			</div>

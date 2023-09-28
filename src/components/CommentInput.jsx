@@ -14,6 +14,7 @@ const {status} = useSession()
 			)}
 			{status === 'authenticated' && (
 				<form method='POST' onSubmit={handleSubmit} className='w-full'>
+					<label htmlFor="message"></label>
 					<textarea
 						name='message'
 						rows={5}
@@ -25,7 +26,6 @@ const {status} = useSession()
 						source=''
 						url=''
 						title='Wyślij'
-						name="send"
 					/>
 				</form>
 			)}

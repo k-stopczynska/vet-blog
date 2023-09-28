@@ -28,7 +28,6 @@ const AuthLink = () => {
 					source=''
 					onClick={() => signIn('google')}
 					type='button'
-					name="login"
 				/>
 			)}
 			{status === 'authenticated' && (
@@ -46,13 +45,16 @@ const AuthLink = () => {
 						source=''
 						onClick={() => signOut()}
 						type='button'
-						name="logout"
 					/>
 				</>
 			)}
 
 			<div className='flex md:hidden'>
-				<button className='h-[40px] w-[40px] ' onClick={toggleMenu} name="hamburger">
+				<button
+					className='h-[40px] w-[40px] '
+					onClick={toggleMenu}
+					aria-labelledby="hamburger menu"
+				>
 					<div
 						className={`${className} absolute h-[40px] w-[4px] bg-secondary-100 rounded translate-x-[21px] translate-y-[-50%] before:absolute before:h-[40px] before:w-[4px] before:bg-light-100 before:rounded after:absolute after:h-[40px] after:w-[4px] after:bg-light-100 transition-all`}
 					></div>
@@ -78,7 +80,7 @@ const AuthLink = () => {
 								source=''
 								onClick={() => signIn('google')}
 								type='button'
-								name="login"
+								name='login'
 							/>
 						)}
 						{status === 'authenticated' && (
@@ -99,7 +101,6 @@ const AuthLink = () => {
 									source=''
 									onClick={() => signOut()}
 									type='button'
-									name="logout"
 								/>
 							</>
 						)}
