@@ -6,7 +6,7 @@ const Card = ({ title, img, createdAt, categorySlug, slug, key }) => {
 	return (
 		<Link
 			href={`/posts/${slug}`}
-			className='w-[250px] h-[380px] lg:w-[300px] lg:h-[400px] relative p-10 cardContainer'
+			className='w-[250px] h-[380px] lg:w-[300px] lg:h-[400px] relative p-10 aspect-auto cardContainer'
 			key={key}
 		>
 			{img && <Image src={img} alt='' fill />}
