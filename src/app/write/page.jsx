@@ -48,7 +48,7 @@ const page = () => {
 		<form
 			method='POST'
 			onSubmit={handleSubmit}
-			className='w-full flex flex-col items-center gap-4 mb-10'
+			className='w-full flex flex-col items-center gap-2 mb-10'
 		>
 			<label htmlFor='title'></label>
 			<input
@@ -68,12 +68,12 @@ const page = () => {
 				<option value='zwierzaki'>Zwierzaki</option>
 				<option value='lifestyle'>Lifestyle</option>
 			</select>
-			<div className='flex w-full gap-4'>
+			<div className='flex w-full gap-4 pt-2'>
 				<label htmlFor='image-url'></label>
 				<input
 					name='image-url'
 					placeholder='Image URL'
-					className='bg-primary-100 border w-full p-4 flex-1'
+					className='bg-primary-100 border w-full p-4 flex-1 ml-[-16px]'
 				/>
 				<span>or choose one</span>
 				<label htmlFor='image-select'></label>
