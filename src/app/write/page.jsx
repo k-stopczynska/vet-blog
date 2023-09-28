@@ -55,7 +55,7 @@ const page = () => {
 				placeholder='Title'
 				className='bg-primary-100 border w-full p-4'
 			/>
-			<select className='bg-primary-100 border w-full p-4'>
+			<select className='bg-primary-100 border w-full p-4 text-gray-400'>
 				<option value=''>Choose category</option>
 				<option value='weterynaria'>Weterynaria</option>
 				<option value='RPG'>RPG</option>
@@ -63,14 +63,14 @@ const page = () => {
 				<option value='zwierzaki'>Zwierzaki</option>
 				<option value='lifestyle'>Lifestyle</option>
 			</select>
-			<div className='flex w-full'>
+			<div className='flex w-full gap-4'>
 				<input
 					name='message'
 					placeholder='Image URL'
-					className='bg-primary-100 border w-full p-4 flex-1 pr-2'
+					className='bg-primary-100 border w-full p-4 flex-1'
 				/>
-				or choose one
-				<select className='bg-primary-100 border w-full p-4 flex-1 pl-2'>
+				<span>or choose one</span>
+				<select className='bg-primary-100 border w-full p-4 flex-1 text-gray-400'>
 					<option value=''>Choose image</option>
 					<option value='/street.jpeg'>Ulica</option>
 					<option value='/street2.jpeg'>Ulica 2</option>
@@ -92,6 +92,7 @@ const page = () => {
 				source=''
 				url=''
 				title='Wyślij'
+				name="send"
 			/>
 		</form>
 	);

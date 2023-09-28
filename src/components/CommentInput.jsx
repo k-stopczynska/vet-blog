@@ -25,6 +25,7 @@ const {status} = useSession()
 						source=''
 						url=''
 						title='Wyślij'
+						name="send"
 					/>
 				</form>
 			)}

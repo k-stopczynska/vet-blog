@@ -30,6 +30,7 @@ const Featured = async () => {
 						title='Czytaj dalej'
 						variant='CTA'
 						url={`/posts/${slug}`}
+						name="read more"
 					/>
 				</div>
 				<p className='text-base md:text-lg md:flex-1'>
