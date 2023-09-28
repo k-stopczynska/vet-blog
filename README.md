@@ -1,34 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Veterinarian Blog
 
-First, run the development server:
+Blog for veterinarian, about work, life, games, RPGs, animals.
+
+
+## Tech Stack
+
+**Client:** NextJS, TailwindCSS
+
+**Server:** NextJS, ORM: Prisma
+
+**DB:** MongoDB
+
+
+## Features
+
+- Owner can add new posts
+- Featured section is dynamic, and links to the last post
+- Pagination on main page
+- Reader can browse through posts by categories
+- Logged in reader can add comments
+- Contact page links to socials or opens mail client
+- Logging in by Google account
+
+
+## Screenshots
+
+![Main Desktop](https://lh3.googleusercontent.com/pw/ADCreHdlgY-PxN2JigKMjA1C9UaCmCGkFwqLOm3hb_irr8vb1urQnAsQyIbyqqSAxWPvC5EhBIKqKxqRSZqselNEvY-QKVVe1ZN_aJO6A-Fun68UxBi6sIU=w2400)
+
+![Category Desktop](https://lh3.googleusercontent.com/pw/ADCreHc2Ekx1F1zLxxOR-jGfn27MGko3U8GrDaYNnb8gDpt7GUZGYOIJ7iTTCqYYQ3pMFu-y8LnCsqDIkhhWPQPBhNmUOPfTNRgkEghPULftKW8_qXPu8sU=w2400)
+
+![About Desktop](https://lh3.googleusercontent.com/pw/ADCreHfHMGTVVOiVT621o3YAZqUpB5S7MLrvRhWBPXlD1D3kdIJeNg_YKMxbW_sE45wMYkAQzhiZokfonPqG-dDPpf3AOC5pRtgtrV5YufxhjJbGQZOSfs0=w2400)
+
+![Contact Desktop](https://lh3.googleusercontent.com/pw/ADCreHe7zibYNNg4qSUmWN8w8ba2hcePn5BAJ_zoJhl6QcNfdoEloLckFQH0NxDEFjBmxMfo3BEGpsyKW3IpNnC0DTUW4ROTjZbuCIFdFpkrHS5Rn__Bp7A=w2400)
+
+![Write Desktop](https://lh3.googleusercontent.com/pw/ADCreHc_Hw2Uv4XqK81kL_Fhmi9PWGpChRYJAFSysTDW0RhmQdFd7zyiORHGg8NAyj56YPnICbhkGhFp7EAodbA3fdCReWghfOZSFbRFDxehCFVR44IoCvg=w2400)
+
+
+![Menu Mobile](https://lh3.googleusercontent.com/pw/ADCreHdNDzhJwmuv3eQ3Omqkk6b6tFP9ORG7ykj1XdzaCJs5u63madbLzoTlkVEhRV9e5lwPLAlqEFFtk6u3MR4zDz20WWcMPzNAiyyOCss9VHuS3OVS1UM=w2400)
+
+![Post with comment Mobile](https://lh3.googleusercontent.com/pw/ADCreHcWTomCNLwA92Fv7hjLSF9Kn85WfdOfmGLmJkMEqWiOuavdTRVmyjLgenMajTsTdQJ8SZ0QAs5b8TpL6QckYgq-BI6Uy7fI8zA2bJsIS5VLdZpyeRA=w2400)
+
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  git clone https://github.com/k-stopczynska/vet-blog.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+  cd vet-blog
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Install dependencies
 
-## Learn More
+```bash
+  npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Demo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Coming soon
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Authors
+
+- [@k-stopczynska](https://www.github.com/k-stopczynska)
+
