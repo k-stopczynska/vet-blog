@@ -17,9 +17,9 @@ const page = () => {
 	];
 	return (
 		<section className=' my-20 py-10 gap-6 w-full h-[400px] border flex flex-col items-center justify-center'>
-			<h3 className='text-lg md:text-2xl font-bold mb-4'>
+			<h1 className='text-lg md:text-2xl font-bold mb-4'>
 				Możesz mnie znaleźć tu:
-			</h3>
+			</h1>
 			<div className="flex gap-6">
 				{contacts.map((contact) => (
 					<Contact {...contact} key={contact.id} />

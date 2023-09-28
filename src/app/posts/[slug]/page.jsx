@@ -28,9 +28,9 @@ const page = async ({ params }) => {
 		<article className='gradient mt-10 w-full p-8 md:p-20 flex flex-col justify-center gap-12 '>
 			<div className='flex flex-col items-center justify-between lg:flex-row'>
 				<div className='flex flex-col justify-between h-[300px] flex-1'>
-					<h2 className='text-xl md:text-4xl font-bold pb-6'>
+					<h1 className='text-xl md:text-4xl font-bold pb-6'>
 						{title}
-					</h2>
+					</h1>
 					<Author
 						author={user.name}
 						timestamp={createdAt.split('T')[0]}
