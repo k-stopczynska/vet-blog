@@ -1,7 +1,7 @@
 import React from 'react';
 import Contact from '@/components/Contact';
 
-const page = () => {
+const ContactPage = () => {
 	const contacts = [
 		{
 			id: 'facebook',
@@ -29,4 +29,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default ContactPage;

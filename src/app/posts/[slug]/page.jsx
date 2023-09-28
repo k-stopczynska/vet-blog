@@ -11,7 +11,7 @@ const getPost = async (slug) => {
 	return response.json();
 };
 
-const page = async ({ params }) => {
+const PostPage = async ({ params }) => {
 	const { slug } = params;
 	const post = await getPost(slug);
 
@@ -47,4 +47,4 @@ const page = async ({ params }) => {
 	);
 };
 
-export default page;
+export default PostPage;
