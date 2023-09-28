@@ -15,4 +15,4 @@ const BlogPage = ({ searchParams }) => {
 	);
 };
 
-export default BlogPage;
+
