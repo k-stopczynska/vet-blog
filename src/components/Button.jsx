@@ -19,7 +19,7 @@ const Button = ({ url, title, variant, source, onClick, type, disabled, name }) 
 		variantClass = `shadow ${baseClass} `;
 	}
 	if (variant === 'category') {
-		variantClass = ` flex flex-col lg:flex-row gap-2 border-secondary-100  items-center justify-center w-40 bg-light-100 text-primary-100 uppercase catShadow ${baseClass} ${titleClass}`;
+		variantClass = ` flex flex-col lg:flex-row gap-2 border-secondary-100  items-center justify-center w-40 bg-light-100 text-primary-100 font-bold uppercase catShadow ${baseClass} ${titleClass}`;
 	}
 	if (variant === 'simpleButton') {
 		variantClass =
