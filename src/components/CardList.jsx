@@ -4,7 +4,7 @@ import Pagination from '@/components/Pagination';
 
 const getPosts = async (page, category) => {
 	const response = await fetch(
-		`https://wypranyzempatii.vercel.app/api/posts?page=${page}&cat=${
+		`https://wypranyzempatii.netlify.app/api/posts?page=${page}&cat=${
 			category || ''
 		}`,
 	);

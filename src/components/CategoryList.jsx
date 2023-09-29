@@ -3,7 +3,7 @@ import Button from './Button';
 
 const getCategories = async () => {
 	const response = await fetch(
-		'https://wypranyzempatii.vercel.app/api/categories',
+		'https://wypranyzempatii.netlify.app/api/categories',
 	);
 	if (!response.ok) {
 		throw new Error('Loading categories failed...');

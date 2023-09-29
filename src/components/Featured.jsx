@@ -3,7 +3,7 @@ import Button from './Button';
 
 const getPosts = async (page, category) => {
 	const response = await fetch(
-		`https://wypranyzempatii.vercel.app/api/posts?page=${page}&cat=${category || ''}`,
+		`https://wypranyzempatii.netlify.app/api/posts?page=${page}&cat=${category || ''}`,
 	);
 	if (!response.ok) {
 		throw new Error('Loading posts failed...');
