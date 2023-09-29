@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pl">
+    <html lang="en">
       <AuthProvider>
-        <body className="bg-primary-100 font-plex text-light-100 w-full">
-          <h1>something is wrong</h1>
-          {/* <Wrapper>
+        <h1>something went wrong</h1>
+        {/* <body className="bg-primary-100 font-plex text-light-100 w-full"> */}
+          <Wrapper>
             <Navbar />
             <main>{children}</main>
-          </Wrapper> */}
-          </body>
+          </Wrapper>
+          {/* </body> */}
         </AuthProvider>
     </html>
   )
