@@ -6,9 +6,7 @@ const Navbar = () => {
 	return (
 		<nav className='w-full h-24 flex items-center justify-between'>
 			<Link href='/'>
-				<h3 className='text-2xl lg:text-4xl font-bold pr-4'>
-					Wyprany z empatii.blog
-				</h3>
+				<h3 className='text-2xl lg:text-4xl font-bold pr-4'>.blog</h3>
 			</Link>
 			<div className='flex items-center gap-4 text-base lg:text-xl'>
 				<Link href='/blog' className='link hidden md:flex'>
