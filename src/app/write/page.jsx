@@ -14,8 +14,8 @@ export default function WritePage() {
 	) {
 		return (
 		<Link href='/'>
-			<h1>Uou are not authorized to be here, click here to go back to main page</h1>
-			</Link>;
+			<h1>You are not authorized to be here, click here to go back to main page</h1>
+			</Link>
 		)
 	}
 
