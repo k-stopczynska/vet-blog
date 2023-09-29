@@ -7,9 +7,10 @@ export default function Home({ searchParams }) {
 
 	return (
 		<>
-			<Featured />
+			<h3>I try but something is blocking me...</h3>
+			{/* <Featured />
 			<CategoryList />
-			<CardList page={page} />
+			<CardList page={page} /> */}
 		</>
 	);
 }

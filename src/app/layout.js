@@ -1,7 +1,7 @@
 import './globals.css'
 import Wrapper from '@/components/Wrapper';
 import Navbar from '@/components/Navbar';
-import AuthProvider from '@/providers/AuthPrivider';
+import AuthProvider from '@/providers/AuthProvider';
 
 
 export const metadata = {
