@@ -1,8 +1,6 @@
-
 # Veterinarian Blog
 
 Blog for veterinarian, about work, life, games, RPGs, animals.
-
 
 ## Tech Stack
 
@@ -12,17 +10,15 @@ Blog for veterinarian, about work, life, games, RPGs, animals.
 
 **DB:** MongoDB
 
-
 ## Features
 
-- Owner can add new posts
-- Featured section is dynamic, and links to the last post
-- Pagination on main page
-- Reader can browse through posts by categories
-- Logged in reader can add comments
-- Contact page links to socials or opens mail client
-- Logging in by Google account
-
+-   Owner can add new posts
+-   Featured section is dynamic, and links to the last post
+-   Pagination on main page
+-   Reader can browse through posts by categories
+-   Logged in reader can add comments
+-   Contact page links to socials or opens mail client
+-   Logging in by Google account
 
 ## Screenshots
 
@@ -36,11 +32,9 @@ Blog for veterinarian, about work, life, games, RPGs, animals.
 
 ![Write Desktop](https://lh3.googleusercontent.com/pw/ADCreHc_Hw2Uv4XqK81kL_Fhmi9PWGpChRYJAFSysTDW0RhmQdFd7zyiORHGg8NAyj56YPnICbhkGhFp7EAodbA3fdCReWghfOZSFbRFDxehCFVR44IoCvg=w2400)
 
-
 ![Menu Mobile](https://lh3.googleusercontent.com/pw/ADCreHdNDzhJwmuv3eQ3Omqkk6b6tFP9ORG7ykj1XdzaCJs5u63madbLzoTlkVEhRV9e5lwPLAlqEFFtk6u3MR4zDz20WWcMPzNAiyyOCss9VHuS3OVS1UM=w2400)
 
 ![Post with comment Mobile](https://lh3.googleusercontent.com/pw/ADCreHcWTomCNLwA92Fv7hjLSF9Kn85WfdOfmGLmJkMEqWiOuavdTRVmyjLgenMajTsTdQJ8SZ0QAs5b8TpL6QckYgq-BI6Uy7fI8zA2bJsIS5VLdZpyeRA=w2400)
-
 
 ## Run Locally
 
@@ -68,13 +62,10 @@ Start the server
   npm run dev
 ```
 
-
 ## Demo
 
-Coming soon
-
+https://wypranyzempatii.netlify.app
 
 ## Authors
 
-- [@k-stopczynska](https://www.github.com/k-stopczynska)
-
+-   [@k-stopczynska](https://www.github.com/k-stopczynska)
