@@ -18,7 +18,7 @@ const fetcher = async (url) => {
 
 const Comments = ({ postSlug }) => {
 	const { data, mutate, isLoading } = useSWR(
-		`https://wypranyzempatii.vercel.app/api/comments?postSlug=${postSlug}`,
+		`https://wypranyzempatii.netlify.app/api/comments?postSlug=${postSlug}`,
 		fetcher,
 	);
 
