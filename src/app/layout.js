@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <AuthProvider>
         <body className="bg-primary-100 font-plex text-light-100 w-full">
           <Wrapper>
-            <Navbar />
+            {/* <Navbar /> */}
             <main>{children}</main>
           </Wrapper>
           </body>
