@@ -20,6 +20,7 @@
 		"swr": "^2.2.4"
 	},
 	"devDependencies": {
+		"@netlify/plugin-nextjs": "^4.37.4",
 		"@prisma/nextjs-monorepo-workaround-plugin": "^5.3.1",
 		"autoprefixer": "^10.4.16",
 		"postcss": "^8.4.30",
