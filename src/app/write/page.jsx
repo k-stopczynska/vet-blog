@@ -10,7 +10,6 @@ export default function WritePage() {
 
 	if (
 		status === 'unauthenticated' ||
-		data?.user.name !== 'Klaudia Stopczyńska' ||
 		data?.user.name !== 'Paweł Stopczyński'
 	) {
 		setMessage(
