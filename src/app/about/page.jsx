@@ -10,7 +10,7 @@ export default function AboutPage() {
 				</h2>
 
 				<Image
-					src='/men.jpg'
+					src='/men.jpeg'
 					fill
 					alt=''
 					className='z-10 opacity-30 blur hover:blur-sm hover:invert hover:saturate-200 transition duration-1000 '
