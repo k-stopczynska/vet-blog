@@ -12,7 +12,7 @@ export const GET = async (req) => {
             where: {
                 ...postSlug && { postSlug }
             },
-            include: { user: true },
+            // include: { user: true },
         });
 
         return new NextResponse(JSON.stringify(comments, {status: 200}))
