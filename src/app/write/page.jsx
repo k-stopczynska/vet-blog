@@ -12,9 +12,11 @@ export default function WritePage() {
 		status === 'unauthenticated' ||
 		data?.user.name !== 'Paweł Stopczyński'
 	) {
-		setMessage(
-			'You are not authorized to be here, click here to go back to main page',
-		);
+		return (
+		<Link href='/'>
+			<h1>Uou are not authorized to be here, click here to go back to main page</h1>
+			</Link>;
+		)
 	}
 
 	const slugify = (str) =>
@@ -43,7 +45,7 @@ export default function WritePage() {
 		if (response.status === 200) {
 			const data = await response.json();
 			setMessage(
-				'Post added successfully, click here to go back to Home Page',
+				'Post added successfully, click here to go back to Home Page'
 			);
 		}
 	};
