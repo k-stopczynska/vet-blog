@@ -13,13 +13,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <AuthProvider>
-        <h1>something went wrong</h1>
-        {/* <body className="bg-primary-100 font-plex text-light-100 w-full"> */}
+        <body className="bg-primary-100 font-plex text-light-100 w-full">
           <Wrapper>
             <Navbar />
             <main>{children}</main>
           </Wrapper>
-          {/* </body> */}
+          </body>
         </AuthProvider>
     </html>
   )
