@@ -12,14 +12,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <AuthProvider> */}
+      <AuthProvider>
         <body className="bg-primary-100 font-plex text-light-100 w-full">
           <Wrapper>
             <Navbar />
             <main>{children}</main>
           </Wrapper>
           </body>
-        {/* </AuthProvider> */}
+        </AuthProvider>
     </html>
   )
 }
