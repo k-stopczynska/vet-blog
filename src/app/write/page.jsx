@@ -1,20 +1,19 @@
 'use client';
-import React from 'react';
-import { useRouter } from 'next/navigation';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import Button from '@/components/Button';
 
 export default function WritePage() {
-	const router = useRouter();
 	const { status, data } = useSession();
+	const [message, setMessage] = useState('');
 
-	// if (
-	// 	status === 'unauthenticated' ||
-	// 	data?.user.name !== 'Klaudia Stopczyńska'
-	// ) {
-	// 	return router.push('/');
-	// }
+	if (
+		status === 'unauthenticated' ||
+		data?.user.name !== 'Klaudia Stopczyńska'
+	) {
+		return;
+	}
 
 	const slugify = (str) =>
 		str
@@ -41,7 +40,9 @@ export default function WritePage() {
 
 		if (response.status === 200) {
 			const data = await response.json();
-			// return router.push(`/posts/${data.slug}`);
+			setMessage(
+				'Post added successfully, click here to go back to Home Page',
+			);
 		}
 	};
 
@@ -98,15 +99,16 @@ export default function WritePage() {
 				className='bg-primary-100 border w-full p-4'
 				placeholder='Post'
 			/>
-			<Link href='/'>
-				<Button
-					type='submit'
-					variant='simpleButton'
-					source=''
-					url=''
-					title='Wyślij'
-					name='send'
-				/>
+			<Button
+				type='submit'
+				variant='simpleButton'
+				source=''
+				url=''
+				title='Wyślij'
+				name='send'
+			/>
+			<Link href='/' className='text-xl'>
+				{message}
 			</Link>
 		</form>
 	);
