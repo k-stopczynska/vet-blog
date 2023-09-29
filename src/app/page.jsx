@@ -11,7 +11,7 @@ export default function Home({ searchParams }) {
 		<div>
 			<Featured />
 			<CategoryList />
-			<CardList page={page} />
+			{/* <CardList page={page} /> */}
 		</div>
 	);
 }
