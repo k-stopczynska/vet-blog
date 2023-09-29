@@ -10,9 +10,12 @@ export default function WritePage() {
 
 	if (
 		status === 'unauthenticated' ||
-		data?.user.name !== 'Klaudia Stopczyńska'
+		data?.user.name !== 'Klaudia Stopczyńska' ||
+		data?.user.name !== 'Paweł Stopczyński'
 	) {
-		return;
+		setMessage(
+			'You are not authorized to be here, click here to go back to main page',
+		);
 	}
 
 	const slugify = (str) =>
@@ -107,7 +110,7 @@ export default function WritePage() {
 				title='Wyślij'
 				name='send'
 			/>
-			<Link href='/' className='text-xl'>
+			<Link href='/' className='text-xl border'>
 				{message}
 			</Link>
 		</form>
