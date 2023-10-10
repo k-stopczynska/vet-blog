@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../UI/Button';
+import Link from '../UI/Link';
 
 const getPosts = async (page, category) => {
 	const response = await fetch(
@@ -28,7 +28,7 @@ const Featured = async () => {
 					<h2 className='text-xl md:text-4xl font-bold pb-6'>
 						{title}
 					</h2>
-					<Button
+					<Link
 						title='Czytaj dalej'
 						variant='CTA'
 						url={`/posts/${slug}`}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../UI/Button';
+import Link from '../UI/Link';
 
 const getCategories = async () => {
 	const response = await fetch(
@@ -20,7 +20,7 @@ const CategoryList = async () => {
 			</h3>
 			<div className='flex flex-wrap gap-4 items-center justify-center lg:justify-between mb-10'>
 				{categories?.map((category) => (
-					<Button
+					<Link
 						key={category.title}
 						url={`/blog?category=${category.title}`}
 						title={category.title}
