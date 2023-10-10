@@ -1,9 +1,11 @@
 import React from 'react';
-import Button from './Button';
+import Button from '../UI/Button';
 
 const getPosts = async (page, category) => {
 	const response = await fetch(
-		`https://wypranyzempatii.netlify.app/api/posts?page=${page}&cat=${category || ''}`,
+		`https://wypranyzempatii.netlify.app/api/posts?page=${page}&cat=${
+			category || ''
+		}`,
 	);
 	if (!response.ok) {
 		throw new Error('Loading posts failed...');

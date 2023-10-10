@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
-import Button from '@/components/Button';
+import Button from '@/UI/Button';
 
 export default function WritePage() {
 	const { status, data } = useSession();
@@ -13,10 +13,13 @@ export default function WritePage() {
 		data?.user.name !== 'Paweł Stopczyński'
 	) {
 		return (
-		<Link href='/'>
-			<h1>You are not authorized to be here, click here to go back to main page</h1>
+			<Link href='/'>
+				<h1>
+					You are not authorized to be here, click here to go back to
+					main page
+				</h1>
 			</Link>
-		)
+		);
 	}
 
 	const slugify = (str) =>
@@ -45,7 +48,7 @@ export default function WritePage() {
 		if (response.status === 200) {
 			const data = await response.json();
 			setMessage(
-				'Post added successfully, click here to go back to Home Page'
+				'Post added successfully, click here to go back to Home Page',
 			);
 		}
 	};

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
-import Button from './Button';
+import Button from '../UI/Button';
 
 const AuthLink = () => {
 	const [isOpen, setIsOpen] = useState(false);

@@ -1,11 +1,10 @@
-'use client'
+'use client';
 import React from 'react';
 import { useSession } from 'next-auth/react';
-import Button from './Button';
+import Button from '../UI/Button';
 
-const CommentInput = ({handleSubmit}) => {
-
-const {status} = useSession()
+const CommentInput = ({ handleSubmit }) => {
+	const { status } = useSession();
 
 	return (
 		<>
@@ -14,7 +13,7 @@ const {status} = useSession()
 			)}
 			{status === 'authenticated' && (
 				<form method='POST' onSubmit={handleSubmit} className='w-full'>
-					<label htmlFor="message"></label>
+					<label htmlFor='message'></label>
 					<textarea
 						name='message'
 						rows={5}
@@ -31,6 +30,6 @@ const {status} = useSession()
 			)}
 		</>
 	);
-}
+};
 
-export default CommentInput
+export default CommentInput;

@@ -1,5 +1,5 @@
 import './globals.css'
-import Wrapper from '@/components/Wrapper';
+import Wrapper from '@/UI/Wrapper';
 import Navbar from '@/components/Navbar';
 import AuthProvider from '@/providers/AuthProvider';
 

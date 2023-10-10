@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Author from '@/components/Author';
+import Author from '@/UI/Author';
 import Comments from '@/components/Comments';
 
 const getPost = async (slug) => {

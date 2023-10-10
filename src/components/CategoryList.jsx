@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button';
+import Button from '../UI/Button';
 
 const getCategories = async () => {
 	const response = await fetch(

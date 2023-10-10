@@ -3,7 +3,7 @@
 import React from 'react';
 import useSWR from 'swr';
 import CommentInput from './CommentInput';
-import Comment from './Comment';
+import Comment from '../UI/Comment';
 
 const fetcher = async (url) => {
 	const res = await fetch(url);
