@@ -1,5 +1,6 @@
 import './globals.css'
 import Wrapper from '@/UI/Wrapper';
+import Footer from '@/cmponents/Footer';
 import Navbar from '@/components/Navbar';
 import AuthProvider from '@/providers/AuthProvider';
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
           <Wrapper>
             <Navbar />
             <main>{children}</main>
+            <Footer />
           </Wrapper>
           </body>
         </AuthProvider>
