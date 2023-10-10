@@ -1,6 +1,6 @@
 import './globals.css'
 import Wrapper from '@/UI/Wrapper';
-import Footer from '@/cmponents/Footer';
+import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import AuthProvider from '@/providers/AuthProvider';
 
