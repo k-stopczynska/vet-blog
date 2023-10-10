@@ -15,7 +15,7 @@ const Navbar = () => {
 			</Link>
 			<div className='flex items-center gap-4 text-base lg:text-xl'>
 				{navLinks.map((navLink) => (
-					<LinkItem {...navLink} />
+					<LinkItem {...navLink} key={navLink.title} />
 				))}
 				<AuthLink />
 			</div>
