@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import Loading from '@/app/loading';
 import Card from '../UI/Card';
 import Pagination from '@/components/Pagination';
 
@@ -23,11 +24,13 @@ const CardList = async ({ page, category }) => {
 	return (
 		<>
 			<h3 className='text-lg md:text-2xl font-bold mb-4'>Posty</h3>
-			<div className='flex flex-wrap justify-center md:justify-between gap-10'>
-				{posts?.map((card) => (
-					<Card {...card} key={card._id} />
-				))}
-			</div>
+			<Suspense fallback={<Loading />}>
+				<div className='flex flex-wrap justify-center md:justify-between gap-10'>
+					{posts?.map((card) => (
+						<Card {...card} key={card._id} />
+					))}
+				</div>
+			</Suspense>
 			<Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} />
 		</>
 	);

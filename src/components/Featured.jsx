@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Link from '../UI/LinkItem';
 import Heading from './Heading';
+import Loading from '@/app/loading';
 
 const getPosts = async (page, category) => {
 	const response = await fetch(
@@ -21,21 +22,23 @@ const Featured = async () => {
 	return (
 		<article className='pt-10'>
 			<Heading />
-			<div className='gradient mt-10 w-full p-8 md:p-20 flex flex-col  justify-center md:flex-row md:items-center  md:justify-between gap-12 md:gap-6 overflow-hidden'>
-				<div className='md:flex-1'>
-					<h2 className='text-xl md:text-4xl font-bold pb-6'>
-						{title}
-					</h2>
-					<Link
-						title='Czytaj dalej'
-						variant='CTA'
-						url={`/posts/${slug}`}
-					/>
+			<Suspense fallback={<Loading />}>
+				<div className='gradient mt-10 w-full p-8 md:p-20 flex flex-col  justify-center md:flex-row md:items-center  md:justify-between gap-12 md:gap-6 overflow-hidden'>
+					<div className='md:flex-1'>
+						<h2 className='text-xl md:text-4xl font-bold pb-6'>
+							{title}
+						</h2>
+						<Link
+							title='Czytaj dalej'
+							variant='CTA'
+							url={`/posts/${slug}`}
+						/>
+					</div>
+					<p className='text-base md:text-lg md:flex-1'>
+						{desc.substring(0, 400)}...
+					</p>
 				</div>
-				<p className='text-base md:text-lg md:flex-1'>
-					{desc.substring(0, 400)}...
-				</p>
-			</div>
+			</Suspense>
 		</article>
 	);
 };

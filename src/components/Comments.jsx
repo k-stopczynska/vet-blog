@@ -1,9 +1,10 @@
 'use client';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import useSWR from 'swr';
 import CommentInput from './CommentInput';
 import Comment from '../UI/Comment';
+import Loading from '@/app/loading';
 
 const fetcher = async (url) => {
 	const res = await fetch(url);
@@ -36,11 +37,13 @@ const Comments = ({ postSlug }) => {
 		<section>
 			<h2 className='text-lg md:text-2xl font-bold mb-4'>Komentarze</h2>
 			<CommentInput handleSubmit={handleSubmit} />
-			<div className='flex flex-col gap-4 mt-10'>
-				{data?.map((comment) => (
-					<Comment {...comment} key={comment._id} />
-				))}
-			</div>
+			<Suspense fallback={<Loading />}>
+				<div className='flex flex-col gap-4 mt-10'>
+					{data?.map((comment) => (
+						<Comment {...comment} key={comment._id} />
+					))}
+				</div>
+			</Suspense>
 		</section>
 	);
 };
