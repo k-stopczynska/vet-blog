@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from '../UI/Link';
+import Link from '../UI/LinkItem';
 import Heading from './Heading';
 
 const getPosts = async (page, category) => {

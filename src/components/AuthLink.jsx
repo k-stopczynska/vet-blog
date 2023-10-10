@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import Button from '../UI/Button';
+import LinkItem from '../UI/LinkItem';
 
 const AuthLink = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -68,7 +69,7 @@ const AuthLink = () => {
 					<div
 						className={`w-full h-full flex flex-col gap-12 items-center justify-center bg-primary-100 absolute top-24 left-0 text-4xl transition-all z-50 ${navClass}`}
 					>
-						{navLinks.map((navLink) => <Link {...navLink} />)}
+						{navLinks.map((navLink) => <LinkItem {...navLink} />)}
 						{status !== 'authenticated' && (
 							<Button
 								url=''

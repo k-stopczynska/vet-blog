@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Link = ({ url, title, variant, source }) => {
+const LinkItem = ({ url, title, variant, source }) => {
 	const baseClass = 'border px-6 py-3 ';
 	let variantClass;
 	let titleClass =
@@ -37,4 +37,4 @@ const Link = ({ url, title, variant, source }) => {
 	);
 };
 
-export default Link;
+export default LinkItem;
