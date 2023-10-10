@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Link = ({ url, title, variant, source}) => {
+const Link = ({ url, title, variant, source }) => {
 	const baseClass = 'border px-6 py-3 ';
 	let variantClass;
 	let titleClass =
@@ -21,6 +21,12 @@ const Link = ({ url, title, variant, source}) => {
 	if (variant === 'category') {
 		variantClass = ` flex flex-col lg:flex-row gap-2 border-secondary-100  items-center justify-center w-40 bg-light-100 text-primary-100 font-bold uppercase catShadow ${baseClass} ${titleClass}`;
 	}
+	if (variant === 'desktopNavLink') {
+		variantClass = 'link hidden md:flex';
+	}
+	if (variant === 'mobileNavLink') {
+		variantClass = 'link';
+	}
 	return (
 		<Link href={url} className={variantClass}>
 			{variant === 'category' && (
@@ -31,4 +37,4 @@ const Link = ({ url, title, variant, source}) => {
 	);
 };
 
-export default Link
+export default Link;

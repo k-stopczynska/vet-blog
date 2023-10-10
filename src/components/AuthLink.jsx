@@ -18,6 +18,11 @@ const AuthLink = () => {
 
 	const navClass = !isOpen ? 'translate-x-[800px]' : 'translate-x-[0px]';
 
+	const navLinks = [
+		{ url: '/blog', title: 'Blog', variant: 'mobileNavLink' },
+		{ url: '/about', title: 'O mnie', variant: 'mobileNavLink' },
+	];
+
 	return (
 		<>
 			{status !== 'authenticated' && (
@@ -63,12 +68,7 @@ const AuthLink = () => {
 					<div
 						className={`w-full h-full flex flex-col gap-12 items-center justify-center bg-primary-100 absolute top-24 left-0 text-4xl transition-all z-50 ${navClass}`}
 					>
-						<Link href='/blog' className='link '>
-							Blog
-						</Link>
-						<Link href='/about' className='link'>
-							O mnie
-						</Link>
+						{navLinks.map((navLink) => <Link {...navLink} />)}
 						{status !== 'authenticated' && (
 							<Button
 								url=''
