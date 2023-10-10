@@ -1,4 +1,5 @@
-import React, {useRouter} from 'react';
+import React from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Button from '@/UI/Button';
 
