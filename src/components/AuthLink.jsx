@@ -69,9 +69,6 @@ const AuthLink = () => {
 						<Link href='/about' className='link'>
 							O mnie
 						</Link>
-						<Link href='/contact' className='link'>
-							Kontakt
-						</Link>
 						{status !== 'authenticated' && (
 							<Button
 								url=''

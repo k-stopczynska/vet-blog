@@ -15,9 +15,6 @@ const Navbar = () => {
 				<Link href='/about' className='link hidden md:flex'>
 					O mnie
 				</Link>
-				<Link href='/contact' className='link hidden md:flex '>
-					Kontakt
-				</Link>
 				<AuthLink />
 			</div>
 		</nav>
