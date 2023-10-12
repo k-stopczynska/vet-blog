@@ -8,7 +8,7 @@ const Author = ({ author, timestamp, image }) => {
 		<div className='flex items-center gap-2 lg:mb-0'>
 			<Image
 				src={image}
-				alt=''
+				alt='author image'
 				width={64}
 				height={64}
 				className='rounded-[50%] bg-light-100 p-2'
